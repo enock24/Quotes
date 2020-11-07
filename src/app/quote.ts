@@ -1,8 +1,1 @@
-export class Quote {
-    id: number;
-  name: string;
-  quoteTitle: string;
-  quote: string;
-  QuoteAuthor: string;
-  date: string;
-}
+export class Quote {public  id: number; public name: string; public quoteTitle: string; public quote: string;  public QuoteAuthor: string;  public date: string;public likes:number; public dislikes:number}
