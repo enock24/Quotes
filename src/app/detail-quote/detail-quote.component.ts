@@ -1,5 +1,6 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input, Output, EventEmitter } from '@angular/core';
 import { Quote } from '@angular/compiler';
+import { emit } from 'process';
 
 @Component({
   selector: 'app-detail-quote',
@@ -8,7 +9,10 @@ import { Quote } from '@angular/compiler';
 })
 export class DetailQuoteComponent implements OnInit {
   @Input() quote=Quote;
-
+  @Output()deleteQuote=new EventEmitter<boolean>();
+delete(deleteQuote=boolean){
+  this.deleteQuote. emit(removeQuote);
+}
   constructor() { }
 
   ngOnInit(): void {
