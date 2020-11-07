@@ -5,8 +5,8 @@
         <div *ngFor="let quote of quotes: let i=index">
             <h1>{{quote.name}}</h1>
             <p>{{quote.quoteTitle}}</p>
-            <a class= " btn btn-btn sm btn block btn-danger">Show Details</a>
-            <app-detail-quote [quote]="quote"></app-detail-quote>
+            <a (click) ="showMore(i)"class= " btn btn-btn sm btn block btn-danger">Show Details</a>
+            <app-detail-quote [quote]="quote" *ngIf="quote.showDetails"[quote]="quote"></app-detail-quote>
         </div>
     </div>
    
