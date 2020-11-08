@@ -29,11 +29,21 @@
       <button type="submit" class="btn btn-success">Add Quote</button>
     </form>
     <hr>
-    <di>
+    <div>
         <p>Name:{{formName}}</p>
         <p>Quote Title:{{formQuoteTitle}}</Title></p>
         <p>Quote Author:{{formQouteAuthor}}</p>
         <p>Quote:{{formQuote}}</p>
-    </di>
+    </div>
+    <hr>
+    <div>
+    <h1>Quotes</h1>
+    <div *ngFor="let message for messages">
+        <p>{{message.formName}}</p>
+        <p>{{message.formQouteAuthor}}</p>
+        <p>{{messag.formQuote}}</p>
+        <p>{{message.formQouteTitle}} | {{message.published}}</p>
+    </div>
+    </div>
   </div>
   
