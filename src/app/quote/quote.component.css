@@ -1,0 +1,16 @@
+#two{
+    background-color: green;
+}
+
+.you{
+     background-color: blue;
+}
+
+.me{
+  background-color: red;
+}
+
+.jumbotron{
+    /* background-image: url("/images/img"); */
+    background-color: slategray;
+}

@@ -1,4 +1,4 @@
-<div class="container" style="float: right;">
+  <div class="zte">
     <h2 class="text-center"><b>Add your quote</b></h2>
     <hr>
     <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
@@ -12,7 +12,7 @@
       </div>
       <div class="form-group">
         <label for="description">Author</label>
-        <input type="text" class="form-control" id="description" [(ngModel)]="newQuote.description" name="name"
+        <input type="text" class="form-control" id="description" [(ngModel)]="newQuote.quoteAuthor" name="name"
           #description='ngModel' placeholder="Author's name" required>
         <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
           <p>Author is required</p>
@@ -20,24 +20,25 @@
       </div>
       <div class="form-group">
         <label for="complete">Date</label>
-        <input type='date' id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel"
+        <input type='date' id="complete" [(ngModel)]="newQuote.date" name="completeDate" #completeDate="ngModel"
           required>
         <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
           <p>Date is required</p>
         </div>
       </div>
+
       <button type="submit" class="btn btn-success">Add Quote</button>
     </form>
     <hr>
     <div>
-        <p>Name:{{formName}}</p>
-        <p>Quote Title:{{formQuoteTitle}}</Title></p>
-        <p>Quote Author:{{formQouteAuthor}}</p>
-        <p>Quote:{{formQuote}}</p>
+        <!-- <p>Name:{{formName}}</p>
+        <p>Quote Title:{{formQuoteTittle}}</p>
+        <p>Quote Author:{{formQuoteAuthor}}</p>
+        <p>Quote:{{formQuote}}</p> -->
     </div>
     <hr>
     <div>
-    <h1>Quotes</h1>
+    <!-- <h1>Quotes</h1> -->
     <div *ngFor="let message for messages">
         <p>{{message.formName}}</p>
         <p>{{message.formQouteAuthor}}</p>
@@ -46,4 +47,5 @@
     </div>
     </div>
   </div>
+   
   

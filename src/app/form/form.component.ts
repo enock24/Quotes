@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Message } from "../message";
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Quote} from "../quote";
 
 @Component({
   selector: 'app-form',
@@ -7,25 +7,18 @@ import { Message } from "../message";
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  formName:string;
-  formQuoteTittle:string;
-  formQuote:string;
-  formQuoteAuthor:string;
-  published:Date;
-  newQuote: any;
-  message=[
-    newMessage("Towett","coding", "happy coding", "Bett",new Date() )
-  ]
-  submitQuote(){
-    this.newMessage = new Message(this.formName, this.formQuoteTittle, this.formQuote, this.formQuoteAuthor, this.published, this.newQuote, new Date())
-    this.messages.push(this.newMessage);
+  
+  newQuote = new Quote(0,"","","", "", new Date());
+  @Output() addQuote = new EventEmitter<Quote>();
 
+  submitQuote() {
+    this.addQuote.emit(this.newQuote);
+    this.newQuote = new Quote(0,"", "", "","", new Date());
   }
-
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
   }
-
+ 
 }

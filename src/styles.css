@@ -1,2 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.min.css"
+@import "~bootstrap/dist/css/bootstrap.min.css";
+body{
+    background-image: url('src/assets/background.jpeg');
+    background-attachment: fixed;
+    background-position: center ;
+    background-size: cover ;
+    background-repeat: no-repeat;
+}
+
+button{
+    margin-right: 3%;
+}
+
+.jumbotron{
+    background-image: url('src/assets/white.jpg');
+    background-attachment: fixed;
+    background-position: center ;
+    background-size: cover ;
+    background-repeat: no-repeat;
+}
